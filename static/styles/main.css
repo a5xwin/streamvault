@@ -1,0 +1,98 @@
+.slide {
+    margin-top: -65px;
+}
+.carousel-inner {
+    background: radial-gradient(#3a3a3a, black);
+}
+.carousel-inner img {
+    height: 600px;
+    margin: 0px auto;
+}
+
+.s1 {
+    background-image: url('https://wallpapers.com/images/hd/meet-the-big-hero-6-dcgobnncu2wgb1rw.jpg');
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s2 {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6b578b71-ad2b-4956-be0b-fcd1363594b6/dgdpzuj-375a89a9-d912-4cc4-8fef-2674797fcc98.png/v1/fill/w_1192,h_670/fight_club_wallpaper_by_jackxtyler_dgdpzuj-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvNmI1NzhiNzEtYWQyYi00OTU2LWJlMGItZmNkMTM2MzU5NGI2XC9kZ2RwenVqLTM3NWE4OWE5LWQ5MTItNGNjNC04ZmVmLTI2NzQ3OTdmY2M5OC5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.1Br4J9-W1WW84wmq6nh_TqQ75iO5LXW3aUToSd4_0AY');
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s3 {
+    background-image: url('https://images7.alphacoders.com/812/812835.jpg');
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s4 {
+    background-image: url('https://images5.alphacoders.com/792/792611.jpg');
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s5 {
+    background-image: url('https://wallpapercat.com/w/full/b/e/d/321353-2048x1365-desktop-hd-the-pursuit-of-happyness-background-image.jpg');
+    height: 600px;
+    background-position: -10px -150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.s6 {
+    background-image: url('https://wallpapers.com/images/hd/wolf-of-wall-street-leonardo-calling-3nb1r6qz0cmb7jgw.jpg');
+    height: 600px;
+    background-position: -10px -150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s7 {
+    background-image: url('https://wallpapercave.com/wp/wp2220223.jpg');
+    height: 600px;
+    background-position: -10px -150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s8 {
+    background-image: url('https://images2.fanpop.com/images/photos/6900000/Half-Blood-Prince-movie-stills-harry-potter-6998432-1920-1080.jpg');
+    height: 600px;
+    background-position: -10px -150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s9 {
+    background-image: url('https://i.ytimg.com/vi/T0MmkG_nG1U/maxresdefault.jpg');
+    height: 600px;
+    background-position: -10px -150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s10 {
+    background-image: url('https://media.npr.org/assets/img/2012/09/18/the-perks-of-being-a-wallflower-perks-011_df-04049r_rgb_wide-3c208bad61ae55a50f6bd72726015cd19c2c83dc.jpg');
+    height: 600px;
+    background-position: -10px -150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s11 {
+    background-image: url('https://m.media-amazon.com/images/M/MV5BNzAwODM1MzgyOF5BMl5BanBnXkFtZTcwMzk4ODk2Mw@@._V1_.jpg');
+    height: 600px;
+    background-position: -10px -150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo {
+    text-decoration: none;
+    color: white;
+}

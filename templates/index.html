@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>StreamVault | Home</title>
+{% endblock %}
+
+{% block content %}
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="carouselInner" class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="s1"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s2"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s3"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s4"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s5"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s6"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s7"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s8"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s9"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s10"></div>
+        </div>
+        <div class="carousel-item">
+            <div class="s11"></div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-10 offset-2 m-5">
+                    <h1>Running Now:</h1>
+                </div>
+            </div>
+            <div class="row">
+                {% for movie in mov %}
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+                    <a href="/movies/{{movie.pk}}">
+                        <div class="card shadow" style="width: 18rem; margin:0px auto;">
+                            <img src="{{ movie.movie_poster.url }}" class="card-img-top" height="380px">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">{{ movie.movie_name }}</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselInner = document.getElementById('carouselInner');
+        const items = Array.from(carouselInner.children);
+
+        // Shuffle the items
+        items.sort(() => Math.random() - 0.5);
+
+        // Clear the current items
+        carouselInner.innerHTML = '';
+
+        // Append shuffled items back
+        items.forEach((item, index) => {
+            carouselInner.appendChild(item);
+            // Activate the first item after shuffling
+            if (index === 0) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>StreamVault Confirmation Page</title>
+{% endblock %}
+
+{% block style %}
+<style>
+  /* Link to Google Font - Afacad Flux */
+  @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap');
+
+  /* Apply Afacad Flux Font to body */
+  body {
+    font-family: 'Afacad Flux', sans-serif;
+    background: #2196f34a;
+  }
+
+  .title {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .card {
+    margin: 100px auto;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .pass-h {
+    border-radius: 10px 10px 0px 0px;
+    background: linear-gradient(45deg, orange, #ff4343);
+  }
+
+  .info {
+    line-height: 40px;
+    background: #000;
+    color: palegreen;
+    font-size: 20px;
+    border: solid 1px;
+    border-right: 0px;
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  h3 span {
+    font-weight: 400;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-8 card shadow">
+      <div class="row justify-content-around pass-h title">
+        <div class="col-4">
+          <h2><i class="fa fa-video-camera"></i> StreamVault</h2>
+        </div>
+        <div class="col-6">
+          <h2 style="text-align:center">{{ticket.shows.movie.movie_name}} ({{ticket.shows.cinema.cinema_name}})</h2>
+        </div>
+      </div>
+      <div class="row mt-4 mb-4">
+        <div class="col-3">
+          <!-- qr code -->
+          <img class="img-fluid shadow-sm border"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXgnU7FduTcy0Z7GyoXnMnCqLBwMwAXdiFw&s"> 
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-6">
+              <h3>Booking ID :<span> {{ticket.pk}}</span></h3>
+              <h3>Date :<span> {{ticket.shows.date}}</span></h3>
+              <h3>Price per seat :<span> ₹{{ticket.shows.price}}</span></h3>
+              <!-- Hidden elements to store seat string and price -->
+              <input type="hidden" id="ticketPrice" value="{{ticket.shows.price}}">
+              <input type="hidden" id="seatString" value="{{ticket.useat}}">
+            </div>
+            <div class="col-6">
+              <h3>Seats :<span> {{ticket.useat}}</span></h3>
+              <h3>Time :<span> {{ticket.shows.time}}</span></h3>
+              <h3>Hall :<span> H1</span></h3>
+            </div>
+            <div class="col-12 mt-3 info">
+              <i class="fa fa-location-arrow"></i> {{ticket.shows.cinema.cinema_name}} : <span> {{ticket.shows.cinema.address}}</span>
+            </div>
+            <div class="col-12 mt-3">
+              <h3>Total Price: ₹<span id="totalPrice"></span></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // Get the ticket price and seat string from the hidden inputs
+  var pricePerSeat = parseFloat(document.getElementById('ticketPrice').value);
+  var seatString = document.getElementById('seatString').value;
+
+  // Split the seat string by commas (assuming seats are separated by commas)
+  var seatArray = seatString.split(',');
+
+  // Get the count of seats
+  var seatCount = seatArray.length;
+
+  // Calculate the total price
+  var totalPrice = pricePerSeat * seatCount;
+
+  // Display the total price in the HTML
+  document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+</script>
+{% endblock %}
